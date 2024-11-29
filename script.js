@@ -1,13 +1,31 @@
 function calculate(operation) {
-//Dpkończ kod - pobierz liczby i sprawdź czy są poprawne
-        alert('Proszę wprowadzić prawidłowe liczby.');
-        return;
-    }
+    let n1 = document.getElementById("number1")
+    let n2 = document.getElementById("number2")
 
+    console.log(n1,n2)
+
+
+    let result
     switch (operation) {
-       //Dokończ funkcję działań: dodawania, odejmowania, dzielenia, mnożenia
+
+        case 'Dodaj':
+            result = n1 + n2;
+            break;
+        case 'Odejmij':
+            result = n1 - n2;
+            break;
+        case 'Pomnoz':
+            result = n1 * n2;
+            break;
+        case 'Podziel':
+            if (n2 === 0){
+                alert("Nie można dzielić przez 0.");
+                return;
+            }
+            result = n1 / n2;
+            break;
        
-             //uzupełnij   alert('Nie można dzielić przez zero.');
+        default:
             alert('Nieznana operacja.');
             return;
     }
