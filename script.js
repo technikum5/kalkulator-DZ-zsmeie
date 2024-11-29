@@ -1,8 +1,15 @@
 function calculate(operation) {
-    let n1 = document.getElementById("number1").value;
-    let n2 = document.getElementById("number2").value;
+    let n1 = parseFloat(document.getElementById('number1').value);
+    let n2 = parseFloat(document.getElementById('number2').value);
 
-    console.log(n1,n2)
+
+    console.log(n1,n2);
+
+    if (isNaN(n1) || isNaN(n2)){
+        alert('Proszę wprowadzić prawidłowe liczby.');
+        return;
+    }
+
 
 
     let result
